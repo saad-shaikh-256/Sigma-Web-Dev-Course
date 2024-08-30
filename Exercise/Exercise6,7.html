@@ -35,8 +35,8 @@
             padding-top: 0px;
             display: flex;
             top: 0;
-         width: 100vw;
-                        margin: auto;
+            width: 100vw;
+            margin: auto;
             background-color: #ffffff;
             position: Sticky;
             justify-content: space-evenly;
@@ -55,7 +55,7 @@
          header nav {
             display: flex;
             align-items: center;
-         width: 100vw;
+            width: 100vw;
             justify-content: center;
          }
       }
@@ -96,6 +96,8 @@
          gap: 4px;
          font-weight: 400;
          color: #222222;
+         cursor: pointer;
+
       }
 
       .logo img {
@@ -110,6 +112,63 @@
 
       .arrow {
          width: 15%;
+      }
+
+      main .downloadSection {
+         margin-top: 10vh;
+         width: 100vw;
+         height: 70vh;
+      }
+
+      main .downloadSection p {
+         font-size: 4.8vh;
+         font-weight: 300;
+         width: 50vw;
+         margin: auto;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+         color: #222222;
+      }
+
+      .heading {
+         width: 50vw;
+         display: flex;
+         flex-wrap: wrap
+      }
+
+      main .downloadSection .SubText {
+         font-size: 2.42vh;
+         font-weight: 200;
+         width: 50vw;
+         margin: auto;
+         margin-top: 3vh;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+         color: #222222;
+      }
+
+      main .downloadSection button {
+         font-size: 1.4vh;
+         font-weight: 800;
+         margin: auto;
+         width: fit-content;
+         padding: 15px 20px;
+         color: #ffff;
+         margin-top: 3vh;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         background-color: #01b6d1;
+         border: none;
+         border-radius: 8px;
+         cursor: pointer;
+         text-transform: uppercase;
       }
    </style>
 </head>
@@ -133,6 +192,15 @@
          </ul>
       </nav>
    </header>
+   <main>
+      <div class="downloadSection">
+         <p class="heading">Download <strong> UltraEdit </strong> for Windows <img
+               src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt=""></p>
+         <p class="SubText">Download and try UltraEdit before you buy it! This download includes the full Windows
+            version of the text editor.</p>
+         <button>Download mac or linux version</button>
+      </div>
+   </main>
 </body>
 
 </html>
