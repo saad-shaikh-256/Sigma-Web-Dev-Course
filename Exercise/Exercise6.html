@@ -30,6 +30,20 @@
          align-items: center;
       }
 
+      @media only screen and (max-width: 480px) {
+         header {
+            padding-top: 0px;
+            display: flex;
+            top: 0;
+         width: 100vw;
+                        margin: auto;
+            background-color: #ffffff;
+            position: Sticky;
+            justify-content: space-evenly;
+            align-items: center;
+         }
+      }
+
       header nav {
          display: flex;
          align-items: center;
@@ -37,28 +51,65 @@
          width: 100vw;
       }
 
+      @media only screen and (max-width: 480px) {
+         header nav {
+            display: flex;
+            align-items: center;
+         width: 100vw;
+            justify-content: center;
+         }
+      }
+
       header nav ul {
          display: flex;
          align-items: center;
          gap: 1.5vw;
-         
       }
 
-      header nav ul li{
+      @media only screen and (max-width: 480px) {
+         header nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+      }
+
+      @media only screen and (min-width: 480.5px) {
+         nav .mobileMenu {
+            display: none;
+            margin: auto;
+         }
+      }
+
+      @media only screen and (max-width: 480px) {
+         nav .Links {
+            display: none;
+         }
+      }
+
+      header nav ul li {
          list-style: none;
          display: flex;
-         font-size: 16px;
+         font-size: large;
          line-height: 14px;
          align-items: center;
          gap: 4px;
          font-weight: 400;
          color: #222222;
       }
-      .logo img{
+
+      .logo img {
          width: 70%;
       }
-      .arrow{
-         width: 16px;
+
+      @media only screen and (max-width: 480px) {
+         .logo img {
+            width: 40%;
+         }
+      }
+
+      .arrow {
+         width: 15%;
       }
    </style>
 </head>
@@ -69,13 +120,16 @@
          <ul class="logo">
             <li><img src="Exercise6Logo.png" alt=""></li>
          </ul>
-         <ul>
+         <ul class="Links">
             <li>Products <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
             <li>For business <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
             <li>Resources <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
             <li>Support <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
             <li>Our company <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
             <li><img src="Exercise6Icon.svg" alt=""></li>
+         </ul>
+         <ul class="mobileMenu">
+            <li><img src="Exercise6Menu.svg" alt=""></li>
          </ul>
       </nav>
    </header>
