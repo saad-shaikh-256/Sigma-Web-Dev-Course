@@ -5,18 +5,314 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Bookmark Manager</title>
+
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+      html,
+      body {
+         font-family: "Baloo Bhai 2", system-ui;
+         margin: 0;
+         height: 100vh;
+         width: 100vw;
+         scroll-behavior: smooth;
+         overflow: hidden;
+      }
+
+      header {
+         background-color: #fafafa;
+         color: #1c1c1c;
+         margin: auto;
+         height: 10vh;
+         width: 95vw;
+      }
+
+      @media only screen and (max-width:480px) {
+         header {
+            background-color: #fafafa;
+            color: #1c1c1c;
+            margin: auto;
+            height: 10vh;
+            width: 100vw;
+         }
+      }
+
+      nav {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin: auto;
+         height: 10vh;
+         width: 95vw;
+
+      }
+
+      @media only screen and (max-width:480px) {
+         nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+
+         }
+      }
+
+      nav>ul {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 3vw;
+      }
+
+      @media only screen and (max-width:480px) {
+
+         nav>ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+
+      }
+
+      nav>ul p {
+         font-size: x-large;
+         font-weight: 700;
+         cursor: pointer;
+
+      }
+
+      @media only screen and (max-width:480px) {
+
+         nav>ul p {
+            font-size: x-large;
+            font-weight: 700;
+            cursor: pointer;
+         }
+
+      }
+
+      nav>ul li {
+         font-size: large;
+         list-style: none;
+         cursor: pointer;
+      }
+
+      @media only screen and (max-width:480px) {
+
+         nav>ul li {
+            display: none;
+         }
+      }
+
+      main {
+         width: 100vw;
+         padding-top: 10vh;
+
+
+      }
+
+      @media only screen and (max-width:480px) {
+
+         main {
+            width: 100vw;
+            padding-top: 05vh;
+         }
+      }
+
+      main .search {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+      }
+
+      @media only screen and (max-width:480px) {
+
+         main .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+         }
+      }
+
+      main .search form {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+      }
+
+      @media only screen and (max-width:480px) {
+
+         main .search form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2vw;
+         }
+      }
+
+      main .search form input[type="search"] {
+         width: 40vw;
+         height: 6vh;
+         padding: 4vh 2vw;
+         border-radius: 2vw;
+         border: 1px solid #d9d9d9;
+         background-color: #f3f3f3;
+         font-size: large;
+      }
+
+      @media only screen and (max-width:480px) {
+
+         main .search form input[type="search"] {
+            width: 60vw;
+            height: 4vh;
+            border-radius: 100px;
+            border: 1px solid #d9d9d9;
+            background-color: #f3f3f3;
+            font-size: smaller !important;
+            padding: 2.5vh 5vw;
+
+         }
+      }
+
+      main .search form button {
+         width: 5vw;
+         height: 5vh;
+         padding: 4vh 2vw;
+         border-radius: 2vw;
+         border: 1px solid #1c1c1c;
+         background-color: #1c1c1c;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         fill: white;
+      }
+
+      @media only screen and (max-width:480px) {
+
+         main .search form button {
+            width: 12vw;
+            height: 4vh;
+            padding: 2.5vh 2.5vw;
+            border-radius: 10vw;
+            border: 1px solid #1c1c1c;
+            background-color: #1c1c1c;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            fill: white;
+         }
+      }
+
+      main>.bookmark {
+         display: flex;
+         width: 80vw;
+         flex-wrap: wrap;
+         gap: 1vw;
+         justify-content: center;
+         align-items: center;
+         margin: auto;
+         margin-top: 5vh;
+      }
+
+      @media only screen and (max-width:480px) {
+         main>.bookmark {
+            display: flex;
+            width: 80vw;
+            flex-wrap: wrap;
+            gap: 1vw;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            margin-top: 6vh;
+         }
+      }
+
+      main>.bookmark>p>a {
+         background-color: #fafafa;
+         color: #1c1c1c;
+         text-decoration: none;
+         padding: 1vh 2vw;
+         border: 1px solid #d9d9d9;
+         border-radius: 50px;
+         font-size: large;
+      }
+
+      @media only screen and (max-width:480px) {
+         main>.bookmark>p>a {
+            background-color: #fafafa;
+            color: #1c1c1c;
+            text-decoration: none;
+            padding: 1vh 5vw;
+            border: 1px solid #d9d9d9;
+            border-radius: 50px;
+            font-size: medium;
+         }
+      }
+   </style>
+
 </head>
 
 <body>
 
-   <h1>
-      My Bookmark
-   </h1>
+   <Header>
+      <nav>
+         <ul>
+            <p>BookMark Manager</p>
+         </ul>
+         <ul>
+            <li>Add Bookmark</li>
+            <li>All BookMark</li>
+         </ul>
+      </nav>
+   </Header>
 
-   <h3>Figma: <a href="https://www.figma.com/@saadshaikh" target="_blank">Open Figma</a></h3> 
-   <h3>Youtube: <a href="https://www.youtube.com" target="_blank">Open Youtube</a></h3> 
-   <h3>Google: <a href="https://www.google.com/" target="_blank">Open Google</a></h3> 
+   <main>
 
+
+      <div class="search">
+         <form id="searchForm" action="https://www.google.com/search" method="get" target="_blank">
+            <input type="search" name="" id="searchInput" placeholder="Personal Search Site">
+            <button type="submit"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                  color="#ffffff" fill="none">
+                  <path d="M17.5 17.5L22 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                     stroke-linejoin="round" color="#ffffff" />
+                  <path
+                     d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                     stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" />
+               </svg></button>
+         </form>
+      </div>
+
+      <div class="bookmark">
+         <p><a href="https://www.figma.com/@saadshaikh">Figma</a></p>
+         <p><a href="https://www.youtube.com">Youtube</a></p>
+         <p><a href="https://www.google.com">Google</a></p>
+         <p><a href="https://www.facebook.com">Facebook</a></p>
+         <p><a href="https://www.instagram.com">Instagram</a></p>
+      </div>
+   </main>
+
+
+   <script>
+      document.addEventListener('DOMContentLoaded', () => {
+         const searchForm = document.getElementById('searchForm');
+         const searchInput = document.getElementById('searchInput');
+
+         searchForm.addEventListener('submit', (event) => {
+            event.preventDefault(); 
+
+            const query = searchInput.value;
+            if (query) {
+              window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+            } else {
+             alert ('Please enter data to search');
+            }
+         });
+      });
+   </script>
 </body>
 
 </html>
