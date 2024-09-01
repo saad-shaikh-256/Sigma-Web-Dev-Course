@@ -5,8 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Bookmark Manager</title>
-
-   <style>
+<style>
       @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
 
       html,
@@ -238,6 +237,16 @@
          border: 1px solid #d9d9d9;
          border-radius: 50px;
          font-size: large;
+
+         &:hover {
+            background-color: #d0d0d0;
+            color: #1c1c1c;
+            text-decoration: none;
+            padding: 1vh 2vw;
+            border: 1px solid #d9d9d9;
+            border-radius: 50px;
+            font-size: large;
+         }
       }
 
       @media only screen and (max-width:480px) {
@@ -302,13 +311,13 @@
          const searchInput = document.getElementById('searchInput');
 
          searchForm.addEventListener('submit', (event) => {
-            event.preventDefault(); 
+            event.preventDefault();
 
             const query = searchInput.value;
             if (query) {
-              window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
+               window.open(`https://www.google.com/search?q=${encodeURIComponent(query)}`, '_blank');
             } else {
-             alert ('Please enter data to search');
+               alert('Please enter data to search');
             }
          });
       });
