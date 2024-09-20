@@ -11,7 +11,7 @@
 
       html {
          font-family: "Baloo Bhai 2", sans-serif;
-         overflow: hidden;
+         overflow-x: hidden;
          scroll-behavior: smooth;
       }
 
@@ -25,7 +25,7 @@
          top: 0;
          width: 100vw;
          background-color: #ffffff;
-         position: Sticky;
+         position: sticky;
          justify-content: space-between;
          align-items: center;
       }
@@ -38,7 +38,6 @@
             width: 100vw;
             margin: auto;
             background-color: #ffffff;
-            position: Sticky;
             justify-content: space-evenly;
             align-items: center;
          }
@@ -179,7 +178,6 @@
          gap: 1vw;
       }
 
-
       main .downloadLanguageSection .Downloadheading img {
          height: 4%;
          width: 4%;
@@ -197,25 +195,35 @@
          color: #222222;
       }
 
+      /* Updated grid layout for downloadLinks */
       .downloadLinks {
-         width: 90vw;
-         display: flex;
+         margin-top: 100px;
+         width: 70vw;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
          margin: auto;
+         gap: 30px;
+         justify-content: center;
          align-items: center;
          justify-content: center;
-         flex-wrap: wrap;
+      }
+
+      @media only screen and (max-width: 480px) {
+         .downloadLinks {
+            grid-template-columns: 1fr;
+         }
       }
 
       .downloadLinks .Box {
          width: fit-content;
          height: fit-content;
-         padding:10px 20px 20px 20px;
+         padding: 10px 20px 20px 20px;
          background-color: #d9d9d93f;
          border-radius: 5%;
-         display: flexbox;
+         display: flex;
          justify-content: center;
          align-items: center;
-
+         flex-direction: column;
       }
 
       .downloadLinks .Box .Language {
@@ -237,14 +245,11 @@
          cursor: pointer;
          justify-content: center;
       }
+
       .downloadLinks .Box .SubText {
-             font-size: x-small;
-          }
-         .downloadLinks .Box .SubText p {
          font-size: x-small;
          text-align: center;
       }
-
    </style>
 </head>
 
@@ -297,7 +302,7 @@
                <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
             </div>
          </div>
-      </div>  <div class="downloadLinks">
+
          <div class="Box">
             <p class="Language">
                English
@@ -310,7 +315,7 @@
                <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
             </div>
          </div>
-      </div>  <div class="downloadLinks">
+
          <div class="Box">
             <p class="Language">
                English
@@ -323,7 +328,7 @@
                <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
             </div>
          </div>
-      </div>  <div class="downloadLinks">
+
          <div class="Box">
             <p class="Language">
                English
@@ -336,20 +341,7 @@
                <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
             </div>
          </div>
-      </div>  <div class="downloadLinks">
-         <div class="Box">
-            <p class="Language">
-               English
-            </p>
-            <div class="Button">
-               <Button> Download 64-bit</Button>
-            </div>
-            <div class="SubText">
-               <p> 02A753B54430A2E29ECADAEAEBC</p>
-               <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
-            </div>
-         </div>
-      </div>  <div class="downloadLinks">
+
          <div class="Box">
             <p class="Language">
                English
