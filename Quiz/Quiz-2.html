@@ -16,24 +16,30 @@
          padding-top: 30px;
          height: 100vh;
          width: 100vw;
+         display: flex;
          flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         background-color: #414141;
+         color: white;
          scroll-behavior: smooth;
          overflow-x: hidden;
-         justify-content: center;
-         align-items: center;
-         background-color: #111111;
-         color: white;
-
       }
 
-      .Video {
+      section {
          display: flex;
          flex-direction: column;
-         justify-content: center;
          align-items: center;
+         margin-bottom: 20px;
       }
 
-      .Video .Videos {
+      h1 {
+         margin: 20px 0;
+         text-align: center;
+      }
+
+      .Videos,
+      .Audios {
          display: flex;
          flex-wrap: wrap;
          justify-content: center;
@@ -41,79 +47,67 @@
          gap: 20px;
       }
 
-       .Video .Videos iframe{
+      .Videos iframe {
          height: 20vh;
          width: 40vh;
+         max-width: 100%;
       }
 
-      .Audio {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-      }
-
-      .Audio .Audios {
-         display: flex;
-         flex-wrap: wrap;
-         justify-content: center;
-         align-items: center;
-         gap: 20px;
+      audio {
+         margin: 5px;
       }
    </style>
 </head>
 
 <body>
-   <span class="Video">
-      <h1>
-         Stand-Up Videos
-      </h1>
-      <span class="Videos">
-         <iframe src="https://www.youtube.com/embed/rBHpA9lXcS0?si=yhOHOtiTIoXM60FF" title="YouTube video player"
+   <section class="Video">
+      <h1>Stand-Up Videos</h1>
+      <div class="Videos">
+         <iframe src="https://www.youtube.com/embed/rBHpA9lXcS0?si=yhOHOtiTIoXM60FF" title="Stand-Up Video 1"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-         <iframe src="https://www.youtube.com/embed/Tqsz6fjvhZM?si=yi0CwTZulMSpx0fP" title="YouTube video player"
+         <iframe src="https://www.youtube.com/embed/Tqsz6fjvhZM?si=yi0CwTZulMSpx0fP" title="Stand-Up Video 2"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-         <iframe src="https://www.youtube.com/embed/qkxuFKqJXWY?si=nQTQvbgDJeLKvDMf" title="YouTube video player"
+         <iframe src="https://www.youtube.com/embed/qkxuFKqJXWY?si=nQTQvbgDJeLKvDMf" title="Stand-Up Video 3"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </span>
-      <h1>
-         The Kapil Sharma Show
-      </h1>
-      <span class="Videos">
-         <iframe src="https://www.youtube.com/embed/crAbfsVgLvY?si=FqCdvJbTQ0z4bIuW" title="YouTube video player"
+      </div>
+   </section>
+
+   <section class="Video">
+      <h1>The Kapil Sharma Show</h1>
+      <div class="Videos">
+         <iframe src="https://www.youtube.com/embed/crAbfsVgLvY?si=FqCdvJbTQ0z4bIuW" title="Kapil Sharma Show Video 1"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-         <iframe src="https://www.youtube.com/embed/CqJkHZgdca8?si=XPuY6kJfBMNqC7ee" title="YouTube video player"
+         <iframe src="https://www.youtube.com/embed/CqJkHZgdca8?si=XPuY6kJfBMNqC7ee" title="Kapil Sharma Show Video 2"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-         <iframe src="https://www.youtube.com/embed/AOs3Tppto3Y?si=Q2Q0tlkGFTAsrEZF" title="YouTube video player"
+         <iframe src="https://www.youtube.com/embed/AOs3Tppto3Y?si=Q2Q0tlkGFTAsrEZF" title="Kapil Sharma Show Video 3"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-      </span>
-   </span>
-   <span class="Audio">
-      <h1>
-         Test Audio
-      </h1>
-      <span class="Audios">
+      </div>
+   </section>
+
+   <section class="Audio">
+      <h1>Test Audio</h1>
+      <div class="Audios">
          <audio src="Audio/Quiz2.mp3" controls autoplay loop></audio>
          <audio src="Audio/Quiz2.mp3" controls></audio>
          <audio src="Audio/Quiz2.mp3" controls></audio>
-      </span>
-   </span>
+      </div>
+   </section>
 </body>
 
 </html>
