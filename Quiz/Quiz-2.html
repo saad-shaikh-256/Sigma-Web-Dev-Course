@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz 2 - Sigma Web-dev</title>
+
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+      html,
+      body {
+         font-family: "Baloo Bhai 2", system-ui;
+         margin: 0;
+         padding-top: 30px;
+         height: 100vh;
+         width: 100vw;
+         flex-direction: column;
+         scroll-behavior: smooth;
+         overflow-x: hidden;
+         justify-content: center;
+         align-items: center;
+         background-color: #111111;
+         color: white;
+
+      }
+
+      .Video {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .Video .Videos {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+      }
+
+       .Video .Videos iframe{
+         height: 20vh;
+         width: 40vh;
+      }
+
+      .Audio {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+      }
+
+      .Audio .Audios {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+      }
+   </style>
+</head>
+
+<body>
+   <span class="Video">
+      <h1>
+         Stand-Up Videos
+      </h1>
+      <span class="Videos">
+         <iframe src="https://www.youtube.com/embed/rBHpA9lXcS0?si=yhOHOtiTIoXM60FF" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+         <iframe src="https://www.youtube.com/embed/Tqsz6fjvhZM?si=yi0CwTZulMSpx0fP" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+         <iframe src="https://www.youtube.com/embed/qkxuFKqJXWY?si=nQTQvbgDJeLKvDMf" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </span>
+      <h1>
+         The Kapil Sharma Show
+      </h1>
+      <span class="Videos">
+         <iframe src="https://www.youtube.com/embed/crAbfsVgLvY?si=FqCdvJbTQ0z4bIuW" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+         <iframe src="https://www.youtube.com/embed/CqJkHZgdca8?si=XPuY6kJfBMNqC7ee" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+         <iframe src="https://www.youtube.com/embed/AOs3Tppto3Y?si=Q2Q0tlkGFTAsrEZF" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </span>
+   </span>
+   <span class="Audio">
+      <h1>
+         Test Audio
+      </h1>
+      <span class="Audios">
+         <audio src="Audio/Quiz2.mp3" controls loop></audio>
+         <audio src="Audio/Quiz2.mp3" controls></audio>
+         <audio src="Audio/Quiz2.mp3" controls></audio>
+      </span>
+   </span>
+</body>
+
+</html>
