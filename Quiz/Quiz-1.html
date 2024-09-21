@@ -5,7 +5,6 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Quiz 1 - Sigma Web-dev</title>
-
    <style>
       @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
 
@@ -20,19 +19,23 @@
          align-items: center;
          scroll-behavior: smooth;
          overflow-x: hidden;
-         background-color: #f4f4f4;
+         background-color: #e8f0fe;
+         color: #333;
       }
 
       .form {
-         height: fit-content;
-         width: fit-content;
-         background-color: white;
+         background-color: #ffffff;
          padding: 2vh 4vw;
-         border-radius: 05%;
+         border-radius: 5%;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s;
+      }
+
+      .form:hover {
+         transform: translateY(-5px);
       }
 
       form {
-         width: fit-content;
          display: flex;
          flex-direction: column;
          gap: 1vh;
@@ -40,104 +43,84 @@
       }
 
       form h1 {
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         padding-bottom: 1.2vh;
-         border-bottom: 1px solid rgba(222, 222, 222, 0.492);
+         text-align: center;
+         padding-bottom: 1.5vh;
+         font-size: 1.8rem;
+         color: #2778cf;
+         /* Primary color */
+         border-bottom: 2px solid rgba(0, 86, 179, 0.5);
       }
 
-      form .inputs {
-         width: fit-content;
-         margin-top: 1vh;
+      .inputs {
          display: flex;
          flex-direction: column;
       }
 
-      form label {
+
+
+      label {
          font-size: large;
          font-weight: 300;
          margin-bottom: 0.5vh;
       }
 
-      form input[type="text"],
+      input[type="text"],
       input[type="email"],
-      input[type="tel"] {
+      input[type="tel"],
+      textarea {
          font-size: medium;
          width: 30vw;
          padding: 1.5vh 1.2vw;
          outline: none;
-         border: 1px solid #d9d9d9;
-         background-color: #fafafa;
+         border: 1px solid #b0c4de;
+         /* Light border color */
+         background-color: #f0f8ff;
+         /* Light input background */
          border-radius: 10px;
+         color: #333;
          color: #4d4d4d;
-         text-overflow: ellipsis;
       }
 
-      form textarea {
-         font-family: "Baloo Bhai 2", system-ui;
-         font-size: medium;
-         width: 30vw;
-         padding: 1.5vh 1.2vw;
+      input:focus,
+      textarea:focus {
+         transition: .5s;
+         border-color: #0056b3;
          outline: none;
-         border: 1px solid #d9d9d9;
-         background-color: #fafafa;
-         border-radius: 10px;
-         color: #4d4d4d;
       }
 
-      form button {
+      button {
          font-size: medium;
          width: 100%;
          padding: 1.5vh 1.2vw;
-         border: 1px solid #000000;
-         background-color: #000000;
          border-radius: 10px;
          color: #ffffff;
          font-weight: 600;
          margin-top: 2vh;
+         border: none;
+         background-color: #0056b3;
       }
+      button:hover {
+         background-color: #004494;
+      }
+
 
       @media only screen and (max-width:480px) {
          .form {
-            height: fit-content;
-            width: fit-content;
-            background-color: white;
             padding: 4vh 8vw;
-            border-radius: 05%;
          }
 
-         form label {
+         label {
             font-size: medium;
-            font-weight: 300;
-            margin-bottom: 0.5vh;
          }
 
-         form input[type="text"],
+         input[type="text"],
          input[type="email"],
-         input[type="tel"] {
+         input[type="tel"],
+         textarea {
             font-size: small;
             width: 70vw;
             padding: 1vh 4vw;
-            outline: none;
-            border: 1px solid #d9d9d9;
-            background-color: #fafafa;
-            border-radius: 10px;
-            color: #4d4d4d;
          }
-
-         form textarea {
-            font-family: "Baloo Bhai 2", system-ui;
-            font-size: small;
-            width: 70vw;
-            padding: 1vh 4vw;
-            outline: none;
-            border: 1px solid #d9d9d9;
-            background-color: #fafafa;
-            border-radius: 10px;
-            color: #4d4d4d;
-         }
-
       }
    </style>
 </head>
@@ -148,26 +131,26 @@
          <h1>Contact Me</h1>
          <div class="inputs">
             <label for="name">Full Name</label>
-            <input type="text" name="name" id="name" placeholder="Enter Your Name" value="Saad Shaikh">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" value="Saad Shaikh" required>
          </div>
          <div class="split">
             <div class="inputs">
                <label for="email">Email</label>
                <input type="email" name="email" id="email" placeholder="Enter Your Email"
-                  value="shaikhsaad256@gmail.com">
+                  value="shaikhsaad256@gmail.com" required>
             </div>
             <div class="inputs">
                <label for="phone">Phone</label>
-               <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number" value="8200060***">
+               <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number" value="8200060***" required>
             </div>
          </div>
          <div class="inputs">
             <label for="subject">Subject</label>
-            <input type="text" name="subject" id="subject" placeholder="Write Your Subject" value="Job Offer">
+            <input type="text" name="subject" id="subject" placeholder="Write Your Subject" value="Job Offer" required>
          </div>
          <div class="inputs">
             <label for="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea name="message" id="message" required></textarea>
          </div>
          <div class="Submit">
             <button type="submit">Submit</button>
