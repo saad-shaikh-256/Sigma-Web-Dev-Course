@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz 1 - Sigma Web-dev</title>
+
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+      html,
+      body {
+         font-family: "Baloo Bhai 2", system-ui;
+         margin: 0;
+         height: 100vh;
+         width: 100vw;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         scroll-behavior: smooth;
+         overflow-x: hidden;
+         background-color: #f4f4f4;
+      }
+
+      .form {
+         height: fit-content;
+         width: fit-content;
+         background-color: white;
+         padding: 2vh 4vw;
+         border-radius: 05%;
+      }
+
+      form {
+         width: fit-content;
+         display: flex;
+         flex-direction: column;
+         gap: 1vh;
+         justify-content: center;
+      }
+
+      form h1 {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         padding-bottom: 1.2vh;
+         border-bottom: 1px solid rgba(222, 222, 222, 0.492);
+      }
+
+      form .inputs {
+         width: fit-content;
+         margin-top: 1vh;
+         display: flex;
+         flex-direction: column;
+      }
+
+      form label {
+         font-size: large;
+         font-weight: 300;
+         margin-bottom: 0.5vh;
+      }
+
+      form input[type="text"],
+      input[type="email"],
+      input[type="tel"] {
+         font-size: medium;
+         width: 30vw;
+         padding: 1.5vh 1.2vw;
+         outline: none;
+         border: 1px solid #d9d9d9;
+         background-color: #fafafa;
+         border-radius: 10px;
+         color: #4d4d4d;
+         text-overflow: ellipsis;
+      }
+
+      form textarea {
+         font-family: "Baloo Bhai 2", system-ui;
+         font-size: medium;
+         width: 30vw;
+         padding: 1.5vh 1.2vw;
+         outline: none;
+         border: 1px solid #d9d9d9;
+         background-color: #fafafa;
+         border-radius: 10px;
+         color: #4d4d4d;
+      }
+
+      form button {
+         font-size: medium;
+         width: 100%;
+         padding: 1.5vh 1.2vw;
+         border: 1px solid #000000;
+         background-color: #000000;
+         border-radius: 10px;
+         color: #ffffff;
+         font-weight: 600;
+         margin-top: 2vh;
+      }
+
+      @media only screen and (max-width:480px) {
+         .form {
+            height: fit-content;
+            width: fit-content;
+            background-color: white;
+            padding: 4vh 8vw;
+            border-radius: 05%;
+         }
+
+         form label {
+            font-size: medium;
+            font-weight: 300;
+            margin-bottom: 0.5vh;
+         }
+
+         form input[type="text"],
+         input[type="email"],
+         input[type="tel"] {
+            font-size: small;
+            width: 70vw;
+            padding: 1vh 4vw;
+            outline: none;
+            border: 1px solid #d9d9d9;
+            background-color: #fafafa;
+            border-radius: 10px;
+            color: #4d4d4d;
+         }
+
+         form textarea {
+            font-family: "Baloo Bhai 2", system-ui;
+            font-size: small;
+            width: 70vw;
+            padding: 1vh 4vw;
+            outline: none;
+            border: 1px solid #d9d9d9;
+            background-color: #fafafa;
+            border-radius: 10px;
+            color: #4d4d4d;
+         }
+
+      }
+   </style>
+</head>
+
+<body>
+   <span class="form">
+      <form>
+         <h1>Contact Me</h1>
+         <div class="inputs">
+            <label for="name">Full Name</label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name" value="Saad Shaikh">
+         </div>
+         <div class="split">
+            <div class="inputs">
+               <label for="email">Email</label>
+               <input type="email" name="email" id="email" placeholder="Enter Your Email"
+                  value="shaikhsaad256@gmail.com">
+            </div>
+            <div class="inputs">
+               <label for="phone">Phone</label>
+               <input type="tel" name="phone" id="phone" placeholder="Enter Phone Number" value="8200060***">
+            </div>
+         </div>
+         <div class="inputs">
+            <label for="subject">Subject</label>
+            <input type="text" name="subject" id="subject" placeholder="Write Your Subject" value="Job Offer">
+         </div>
+         <div class="inputs">
+            <label for="message">Message</label>
+            <textarea name="message" id="message"></textarea>
+         </div>
+         <div class="Submit">
+            <button type="submit">Submit</button>
+         </div>
+      </form>
+   </span>
+</body>
+
+</html>
