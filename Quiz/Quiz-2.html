@@ -13,24 +13,37 @@
       body {
          font-family: "Baloo Bhai 2", system-ui;
          margin: 0;
-         padding-top: 30px;
+         padding-top: 5vh;
          height: 100vh;
          width: 100vw;
          display: flex;
          flex-direction: column;
          align-items: center;
          justify-content: flex-start;
-         background-color: #414141;
+         background-color: #000000;
+         overflow-x: hidden;
          color: white;
          scroll-behavior: smooth;
          overflow-x: hidden;
       }
 
       section {
+         width: 80vw;
          display: flex;
          flex-direction: column;
          align-items: center;
          margin-bottom: 20px;
+         padding: 2vh 2vw;
+         background-color: #414040;
+         border-radius: 30px;
+
+         &:hover {
+            padding: 4vh 2vw;
+            transition: 1s;
+            border: 1px solid #656565;
+            background-color: #686868;
+            border-radius: 30px;
+         }
       }
 
       h1 {
@@ -46,6 +59,7 @@
          align-items: center;
          gap: 20px;
       }
+
 
       .Videos iframe {
          height: 20vh;
