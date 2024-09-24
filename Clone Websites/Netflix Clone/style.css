@@ -359,10 +359,10 @@ nav .CTA Select option {
       color: #fff;
       display: flex;
       flex-direction: column;
-      padding: 3vh 8vw 6vh 8vw;
+      padding: 3vh 0;
       gap: 2vh;
       margin: auto;
-      width: 60vw;
+      width: 80vw;
       overflow: hidden;
    }
 }
@@ -381,7 +381,7 @@ nav .CTA Select option {
       color: #fff;
       width: 100vw;
       overflow-y: hidden;
-      padding: 3vh 0;
+      padding: 1vh 0;
       font-size: large;
       font-weight: 700;
    }
@@ -426,12 +426,12 @@ nav .CTA Select option {
    .MovieSection .Movie {
       display: flex;
       flex-direction: row;
-      gap: 4vh;
+      gap: 2vh;
       align-items: center;
       padding-left: 2vw;
       justify-content: space-around;
       padding-bottom: 4vh;
-      width: 60vw;
+      width: 80vw;
       height: fit-content;
       overflow-x: scroll;
       overflow-y: hidden;
@@ -442,6 +442,15 @@ nav .CTA Select option {
 .MovieSection .Movie .images {
    display: flex;
    align-items: end;
+
+   &:hover {
+      scale: 105%;
+      transition: .5s;
+      -webkit-transition: .5s;
+      -moz-transition: .5s;
+      -ms-transition: .5s;
+      -o-transition: .5s;
+   }
 }
 
 @media only screen and (max-width: 480px) {
@@ -449,6 +458,28 @@ nav .CTA Select option {
       display: flex;
    }
 }
+
+.images img {
+   border-radius: 8px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   -ms-border-radius: 8px;
+   -o-border-radius: 8px;
+}
+
+
+@media only screen and (max-width: 480px) {
+   .images img {
+      height: 200px;
+      width: 150px;
+      border-radius: 8px;
+      -webkit-border-radius: 8px;
+      -moz-border-radius: 8px;
+      -ms-border-radius: 8px;
+      -o-border-radius: 8px;
+   }
+}
+
 
 .images span {
    display: flex;
@@ -465,15 +496,15 @@ nav .CTA Select option {
 
 @media only screen and (max-width: 480px) {
    .images span {
-         display: flex;
-         font-size: 100px;
-         color: #000;
-         font-weight: bolder;
-         -webkit-text-stroke: 1px;
-         -webkit-text-stroke-color: white;
-         height: fit-content;
-         margin-right: -40px;
-         margin-bottom: -60px;
-         z-index: 10;
-      }
+      display: flex;
+      font-size: 60px;
+      color: #000;
+      font-weight: bolder;
+      -webkit-text-stroke: 1px;
+      -webkit-text-stroke-color: white;
+      height: fit-content;
+      margin-right: -20px;
+      margin-bottom: -20px;
+      z-index: 10;
+   }
 }
