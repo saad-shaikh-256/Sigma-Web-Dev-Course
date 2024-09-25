@@ -608,14 +608,14 @@ nav .CTA Select option {
    color: #fff;
    width: 100vw;
    padding: 3vh 0;
-   font-size: large;
-   font-weight: 700;
+   font-size: x-large;
+   font-weight: 900;
 }
 
 @media only screen and (max-width: 480px) {
    .ReasonsSection>span {
-      font-size: medium;
-      font-weight: 600;
+      font-size: large;
+         font-weight: 700;
    }
 }
 
@@ -656,7 +656,7 @@ nav .CTA Select option {
       padding: 2vh;
       margin: 1vh;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-   justify-content: space-between;
+      justify-content: space-between;
    }
 }
 
@@ -695,18 +695,103 @@ nav .CTA Select option {
       opacity: 0.6;
    }
 }
+
 .TextBox .icon {
-width: 100%;
+   width: 100%;
 }
 
 .TextBox img {
-  
+
    width: 30%;
    padding-left: 70%;
 }
 
 @media only screen and (max-width: 480px) {
-.TextBox img {
+   .TextBox img {
       width: 25%;
+   }
+}
+
+.FQA {
+   margin: auto;
+   width: 80vw;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   overflow: hidden;
+   padding: 3vh 8vw 6vh 10vw;
+   gap: 2vh;
+}
+
+
+@media only screen and (max-width: 480px) {
+   .FQA {
+      width: 80vw;
+      padding: 3vh 0;
+      gap: 2vh;
+   }
+}
+
+.FQA span {
+   color: #fff;
+   width: 100vw;
+   padding: 3vh 0;
+   font-size: x-large;
+   font-weight: 900;
+}
+
+
+@media only screen and (max-width: 480px) {
+   .FQA span {
+         color: #fff;
+         width: 100vw;
+         padding: 3vh 0;
+         font-size: large;
+            font-weight: 700;
+      }
+}
+
+.FQA .Questions {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   color: #fff;
+   background-color: #2d2d2d;
+   padding: 3vh 2vw;
+
+   &:hover {
+      transition: 0.5s;
+      background-color: #545454;
+   }
+}
+
+
+@media only screen and (max-width: 480px) {
+   .FQA .Questions {
+      width: 70vw;
+      display: flex;
+      justify-content: space-between;
+      color: #fff;
+      background-color: #2d2d2d;
+      padding: 2dvb 6vw;
+
+      &:hover {
+         transition: 0.5s;
+         background-color: #545454;
+      }
+   }
+}
+
+.FQA .heading {
+   font-size: x-large;
+   font-weight: 600;
+}
+
+
+@media only screen and (max-width: 480px) {
+   .FQA .heading {
+      font-size: medium;
+      font-weight: 600;
    }
 }
