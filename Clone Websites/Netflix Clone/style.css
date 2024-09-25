@@ -508,3 +508,27 @@ nav .CTA Select option {
       z-index: 10;
    }
 }
+
+.ReasonsSection {
+   margin: auto;
+   width: 60vw;
+   color: #fff;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+   padding: 3vh 8vw 6vh 10vw;
+   gap: 2vh;
+}
+
+@media only screen and (max-width: 480px) {
+   .ReasonsSection {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      padding: 3vh 0;
+      gap: 2vh;
+      margin: auto;
+      width: 80vw;
+      overflow: hidden;
+   }
+}
