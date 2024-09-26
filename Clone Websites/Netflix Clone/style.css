@@ -832,7 +832,7 @@ nav .CTA Select option {
 }
 
 @media only screen and (max-width: 480px) {
-   
+
    .Sub-Email .inputs {
       color: #fff;
       display: flex;
@@ -866,7 +866,7 @@ nav .CTA Select option {
 
 @media only screen and (max-width: 480px) {
 
-.Sub-Email .inputs input {
+   .Sub-Email .inputs input {
       color: #fff;
       width: 75vw;
       display: flex;
@@ -896,7 +896,7 @@ nav .CTA Select option {
 }
 
 @media only screen and (max-width: 480px) {
-.Sub-Email .inputs>button {
+   .Sub-Email .inputs>button {
       color: #fff;
       background: #c11119;
       font-size: medium;
@@ -907,5 +907,146 @@ nav .CTA Select option {
       align-items: center;
       padding: 1.2vh 3.5vw;
       border-radius: 4px;
+   }
+}
+
+.Footer {
+   width: 80vw;
+   color: #d7d6d6;
+
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   gap: 2vh;
+   margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer {
+      width: 90vw;
+      gap: 2vh;
+      margin: auto;
+   }
+}
+
+.Footer .PageLink {
+   padding-top: 2vh;
+   width: 100%;
+   color: #d7d6d6;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 2vh;
+   justify-content: space-between;
+   text-decoration: underline;
+   margin: auto;
+   justify-content: space-between #d7d6d6;
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer .PageLink {
+      padding-top: 2vh;
+      width: 90vw;
+      gap: 2vh;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+   }
+}
+
+.Footer .PageLink .links {
+   display: flex;
+   flex-direction: column;
+   gap: 1vh;
+   font-size: small;
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer .PageLink .links {
+      display: flex;
+      flex-direction: column;
+      gap: 1vh;
+      font-size: small;
+   }
+}
+
+.Footer .button {
+   padding-top: 2vh;
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer .button {
+      padding-top: 2vh;
+   }
+}
+
+.Footer Select {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   width: fit-content;
+   background-color: rgba(30, 30, 30, 0.129);
+   color: white;
+   padding: 2px 12px;
+   font-size: medium;
+   font-weight: 600;
+   border-radius: 6px;
+   border: 1.4px double #fff;
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   -ms-border-radius: 6px;
+   -o-border-radius: 6px;
+
+   &:hover {
+      padding: 4px 16px;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer Select {
+      display: flex;
+      width: 24vw;
+      text-overflow: ellipsis;
+      background-color: rgba(30, 30, 30, 0.129);
+      color: white;
+      padding: 1px 6px;
+      font-size: small;
+      font-weight: 600;
+      border-radius: 6px;
+      border: 1.4px double #fff;
+      -webkit-border-radius: 6px;
+      -moz-border-radius: 6px;
+      -ms-border-radius: 6px;
+      -o-border-radius: 6px;
+
+      &:hover {
+         padding: 2px 8px;
+      }
+   }
+}
+
+.Footer Select option {
+   background-color: rgb(255, 255, 255);
+   color: rgb(0, 0, 0);
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer Select option {
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+   }
+}
+
+.Footer .F-logo {
+   padding-top: 2vh;
+   padding-bottom: 10vh;
+}
+
+@media only screen and (max-width: 480px) {
+   .Footer .F-logo {
+      padding-top: 2vh;
+      padding-bottom: 08vh;
    }
 }
