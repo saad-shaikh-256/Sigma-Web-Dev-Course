@@ -12,6 +12,7 @@ body {
    background-color: #000;
    overflow-x: hidden;
    width: 100vw;
+   height: fit-content;
 
 }
 
@@ -344,13 +345,13 @@ nav .CTA Select option {
 }
 
 .MovieSection {
-   margin: auto;
    width: 80vw;
    color: #fff;
    display: flex;
    flex-direction: column;
    overflow: hidden;
-   padding: 3vh 8vw 6vh 10vw;
+   padding: 3vh 0vw;
+   margin: auto;
    gap: 2vh;
 }
 
@@ -362,7 +363,7 @@ nav .CTA Select option {
       padding: 3vh 0;
       gap: 2vh;
       margin: auto;
-      width: 80vw;
+      width: 90vw;
       overflow: hidden;
    }
 }
@@ -507,7 +508,7 @@ nav .CTA Select option {
       padding-left: 2vw;
       justify-content: space-around;
       padding-bottom: 4vh;
-      width: 80vw;
+      width: 85vw;
       height: fit-content;
       overflow-x: scroll;
       overflow-y: hidden;
@@ -586,20 +587,20 @@ nav .CTA Select option {
 }
 
 .ReasonsSection {
-   margin: auto;
    width: 80vw;
    color: #fff;
    display: flex;
    flex-direction: column;
    overflow: hidden;
-   padding: 3vh 8vw 6vh 10vw;
+   margin: auto;
    gap: 2vh;
 }
 
 @media only screen and (max-width: 480px) {
    .ReasonsSection {
-      width: 80vw;
+      width: 90vw;
       padding: 3vh 0;
+      margin: auto;
       gap: 2vh;
    }
 }
@@ -615,7 +616,7 @@ nav .CTA Select option {
 @media only screen and (max-width: 480px) {
    .ReasonsSection>span {
       font-size: large;
-         font-weight: 700;
+      font-weight: 700;
    }
 }
 
@@ -628,15 +629,15 @@ nav .CTA Select option {
 
 @media only screen and (max-width: 480px) {
    .ReasonsSection>div {
-      width: 80vw;
+      width: 90vw;
    }
 }
 
 .ReasonsSection>div .TextBox {
    display: flex;
    flex-direction: column;
-   height: 35vh;
-   width: 18vw;
+   height: 33vh;
+   width: 17vw;
    background: linear-gradient(to bottom, #1a2145, #220e17);
    border-radius: 10px;
    padding: 2vh;
@@ -650,7 +651,7 @@ nav .CTA Select option {
       display: flex;
       flex-direction: column;
       height: 20vh;
-      width: 80vw;
+      width: 100%;
       background: linear-gradient(to bottom, #1a2145, #220e17);
       border-radius: 10px;
       padding: 2vh;
@@ -713,23 +714,22 @@ nav .CTA Select option {
 }
 
 .FQA {
-   margin: auto;
    width: 80vw;
    color: #fff;
    display: flex;
    flex-direction: column;
    flex-wrap: wrap;
    overflow: hidden;
-   padding: 3vh 8vw 6vh 10vw;
    gap: 2vh;
+   margin: auto;
 }
 
 
 @media only screen and (max-width: 480px) {
    .FQA {
-      width: 80vw;
-      padding: 3vh 0;
+      width: 90vw;
       gap: 2vh;
+      margin: auto;
    }
 }
 
@@ -744,16 +744,16 @@ nav .CTA Select option {
 
 @media only screen and (max-width: 480px) {
    .FQA span {
-         color: #fff;
-         width: 100vw;
-         padding: 3vh 0;
-         font-size: large;
-            font-weight: 700;
-      }
+      color: #fff;
+      width: 100vw;
+      padding: 3vh 0;
+      font-size: large;
+      font-weight: 700;
+   }
 }
 
 .FQA .Questions {
-   width: 100%;
+   width: 93%;
    display: flex;
    justify-content: space-between;
    color: #fff;
@@ -769,7 +769,7 @@ nav .CTA Select option {
 
 @media only screen and (max-width: 480px) {
    .FQA .Questions {
-      width: 70vw;
+      width: 80vw;
       display: flex;
       justify-content: space-between;
       color: #fff;
@@ -793,5 +793,119 @@ nav .CTA Select option {
    .FQA .heading {
       font-size: medium;
       font-weight: 600;
+   }
+}
+
+.Sub-Email {
+   width: 80vw;
+   color: #fff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   overflow: hidden;
+   gap: 2vh;
+   margin: auto;
+   padding: 10vh 0;
+}
+
+@media only screen and (max-width: 480px) {
+   .Sub-Email {
+      width: 90vw;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 2vh;
+      justify-content: center;
+      padding: 8vh 0;
+   }
+}
+
+
+.Sub-Email .inputs {
+   color: #fff;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 1vw;
+}
+
+@media only screen and (max-width: 480px) {
+   
+   .Sub-Email .inputs {
+      color: #fff;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      gap: 1vh;
+   }
+}
+
+.Sub-Email .inputs input {
+   color: #fff;
+   display: flex;
+   text-align: start;
+   border: 1.2px solid rgb(185, 185, 185);
+   backdrop-filter: blur(50px);
+   background: none;
+   font-size: medium;
+   outline: none;
+   border-radius: 4px;
+   padding: 1.5vh 25vw 1.5vh 2vw;
+   -webkit-border-radius: 4px;
+   -moz-border-radius: 4px;
+   -ms-border-radius: 4px;
+   -o-border-radius: 4px;
+
+   &::placeholder {
+      color: white;
+      opacity: 1;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+
+.Sub-Email .inputs input {
+      color: #fff;
+      width: 75vw;
+      display: flex;
+      text-align: start;
+      border: 1.2px solid rgb(185, 185, 185);
+      backdrop-filter: blur(50px);
+      background: none;
+      font-size: medium;
+      border-radius: 4px;
+      padding: 1.5vh;
+
+      &::placeholder {
+         color: white;
+         opacity: 1;
+      }
+   }
+}
+
+.Sub-Email .inputs>button {
+   color: #fff;
+   background: #c11119;
+   font-size: large;
+   font-weight: 900;
+   border: none;
+   padding: 1.5vh 2vw;
+   border-radius: 4px;
+}
+
+@media only screen and (max-width: 480px) {
+.Sub-Email .inputs>button {
+      color: #fff;
+      background: #c11119;
+      font-size: medium;
+      font-weight: 900;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.2vh 3.5vw;
+      border-radius: 4px;
    }
 }
