@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercise 6&7 - Sigma Web-Dev</title>
+
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+      html {
+         font-family: "Baloo Bhai 2", sans-serif;
+         overflow-x: hidden;
+         scroll-behavior: smooth;
+      }
+
+      body {
+         margin: 0;
+      }
+
+      header {
+         padding-top: 10px;
+         display: flex;
+         top: 0;
+         width: 100vw;
+         background-color: #ffffff;
+         position: sticky;
+         justify-content: space-between;
+         align-items: center;
+      }
+
+      @media only screen and (max-width: 480px) {
+         header {
+            padding-top: 0px;
+            display: flex;
+            top: 0;
+            width: 100vw;
+            margin: auto;
+            background-color: #ffffff;
+            justify-content: space-evenly;
+            align-items: center;
+         }
+      }
+
+      header nav {
+         display: flex;
+         align-items: center;
+         justify-content: space-around;
+         width: 100vw;
+      }
+
+      @media only screen and (max-width: 480px) {
+         header nav {
+            display: flex;
+            align-items: center;
+            width: 100vw;
+            justify-content: center;
+         }
+      }
+
+      header nav ul {
+         display: flex;
+         align-items: center;
+         gap: 1.5vw;
+      }
+
+      @media only screen and (max-width: 480px) {
+         header nav ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+         }
+      }
+
+      @media only screen and (min-width: 480.5px) {
+         nav .mobileMenu {
+            display: none;
+            margin: auto;
+         }
+      }
+
+      @media only screen and (max-width: 480px) {
+         nav .Links {
+            display: none;
+         }
+      }
+
+      header nav ul li {
+         list-style: none;
+         display: flex;
+         font-size: large;
+         line-height: 14px;
+         align-items: center;
+         gap: 4px;
+         font-weight: 400;
+         color: #222222;
+         cursor: pointer;
+
+      }
+
+      .logo img {
+         width: 70%;
+      }
+
+      @media only screen and (max-width: 480px) {
+         .logo img {
+            width: 40%;
+         }
+      }
+
+      .arrow {
+         width: 15%;
+      }
+
+      main .downloadSection {
+         margin-top: 10vh;
+         width: 100vw;
+         height: 35vh;
+      }
+
+      main .downloadSection p {
+         font-size: 4.8vh;
+         font-weight: 300;
+         width: 50vw;
+         margin: auto;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+         color: #222222;
+      }
+
+      .heading {
+         width: 50vw;
+         display: flex;
+         flex-wrap: wrap
+      }
+
+      main .downloadSection .SubText {
+         font-size: 2.42vh;
+         font-weight: 200;
+         width: 50vw;
+         margin: auto;
+         margin-top: 3vh;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+         color: #222222;
+      }
+
+      main .downloadSection button {
+         font-size: 1.4vh;
+         font-weight: 800;
+         margin: auto;
+         width: fit-content;
+         padding: 15px 20px;
+         color: #ffff;
+         margin-top: 3vh;
+         display: flex;
+         text-align: center;
+         justify-content: center;
+         align-items: center;
+         background-color: #01b6d1;
+         border: none;
+         border-radius: 8px;
+         cursor: pointer;
+         text-transform: uppercase;
+      }
+
+      main .downloadLanguageSection .Downloadheading {
+         display: flex;
+         width: 100vw;
+         justify-content: center;
+         align-items: center;
+         gap: 1vw;
+      }
+
+      main .downloadLanguageSection .Downloadheading img {
+         height: 4%;
+         width: 4%;
+         border: 3px solid black;
+         border-radius: 100%;
+      }
+
+      main .downloadLanguageSection .Downloadheading .downloadUltra {
+         font-size: x-large;
+         color: #222222;
+      }
+
+      main .downloadLanguageSection .Downloadheading p {
+         font-size: large;
+         color: #222222;
+      }
+
+      /* Updated grid layout for downloadLinks */
+      .downloadLinks {
+         margin-top: 100px;
+         width: 70vw;
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+         margin: auto;
+         gap: 30px;
+         justify-content: center;
+         align-items: center;
+         justify-content: center;
+      }
+
+      @media only screen and (max-width: 480px) {
+         .downloadLinks {
+            grid-template-columns: 1fr;
+         }
+      }
+
+      .downloadLinks .Box {
+         width: fit-content;
+         height: fit-content;
+         padding: 10px 20px 20px 20px;
+         background-color: #d9d9d93f;
+         border-radius: 5%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+      }
+
+      .downloadLinks .Box .Language {
+         display: flex;
+         justify-content: center;
+         font-size: x-large;
+         font-weight: 600;
+      }
+
+      .downloadLinks .Box .Button Button {
+         font-size: medium;
+         font-weight: 500;
+         color: #ffffff;
+         background-color: #5bb85d;
+         padding: 1.2vh 2vw;
+         border: none;
+         border-radius: 12px;
+         display: flex;
+         cursor: pointer;
+         justify-content: center;
+      }
+
+      .downloadLinks .Box .SubText {
+         font-size: x-small;
+         text-align: center;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul class="logo">
+            <li><img src="Exercise6Logo.png" alt=""></li>
+         </ul>
+         <ul class="Links">
+            <li>Products <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
+            <li>For business <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
+            <li>Resources <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
+            <li>Support <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
+            <li>Our company <img src="Exercise6Icon2.svg" alt="" class="arrow"></li>
+            <li><img src="Exercise6Icon.svg" alt=""></li>
+         </ul>
+         <ul class="mobileMenu">
+            <li><img src="Exercise6Menu.svg" alt=""></li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="downloadSection">
+         <p class="heading">Download <strong> UltraEdit </strong> for Windows <img
+               src="https://www.ultraedit.com/wp-content/uploads/2022/10/Reviews.png" alt=""></p>
+         <p class="SubText">Download and try UltraEdit before you buy it! This download includes the full Windows
+            version of the text editor.</p>
+         <button>Download mac or linux version</button>
+      </div>
+
+      <div class="downloadLanguageSection">
+         <div class="Downloadheading">
+            <img src="https://www.ultraedit.com/wp-content/uploads/2023/01/UE_logo_icon_black-new.png" alt="">
+            <p class="downloadUltra">Download UltraEdit</p>
+            <p>v2024.1(released 2024-08-27) | Hotfix information (2024-08-18)</p>
+         </div>
+      </div>
+
+      <div class="downloadLinks">
+         <div class="Box">
+            <p class="Language">
+               English
+            </p>
+            <div class="Button">
+               <Button> Download 64-bit</Button>
+            </div>
+            <div class="SubText">
+               <p> 02A753B54430A2E29ECADAEAEBC</p>
+               <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
+            </div>
+         </div>
+
+         <div class="Box">
+            <p class="Language">
+               English
+            </p>
+            <div class="Button">
+               <Button> Download 64-bit</Button>
+            </div>
+            <div class="SubText">
+               <p> 02A753B54430A2E29ECADAEAEBC</p>
+               <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
+            </div>
+         </div>
+
+         <div class="Box">
+            <p class="Language">
+               English
+            </p>
+            <div class="Button">
+               <Button> Download 64-bit</Button>
+            </div>
+            <div class="SubText">
+               <p> 02A753B54430A2E29ECADAEAEBC</p>
+               <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
+            </div>
+         </div>
+
+         <div class="Box">
+            <p class="Language">
+               English
+            </p>
+            <div class="Button">
+               <Button> Download 64-bit</Button>
+            </div>
+            <div class="SubText">
+               <p> 02A753B54430A2E29ECADAEAEBC</p>
+               <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
+            </div>
+         </div>
+
+         <div class="Box">
+            <p class="Language">
+               English
+            </p>
+            <div class="Button">
+               <Button> Download 64-bit</Button>
+            </div>
+            <div class="SubText">
+               <p> 02A753B54430A2E29ECADAEAEBC</p>
+               <p> CC4EAF7B9629FF37E98CEB61C84527CF6A779</p>
+            </div>
+         </div>
+      </div>
+   </main>
+</body>
+
+</html>
