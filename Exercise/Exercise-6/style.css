@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html,
+body {
+   font-family: "Baloo Bhai 2", system-ui;
+   min-width: 100vw;
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   overflow-x: hidden;
+   flex-wrap: wrap;
+}
+
+.header {
+   padding: 1vh;
+   top: 0;
+   width: 100vw;
+   position: sticky;
+   background-color: white;
+   margin: auto;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 480px) {
+   .header {
+      padding: 2vh;
+      display: flex;
+      top: 0;
+      width: 100vw;
+      position: sticky;
+      background-color: white;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      flex-wrap: wrap;
+   }
+}
+
+.nav {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 70vw;
+   flex-wrap: wrap;
+}
+
+
+@media only screen and (max-width: 480px) {
+   .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80vw;
+      flex-wrap: wrap;
+   }
+}
+
+.logo img {
+   width: 70%;
+   cursor: pointer;
+}
+
+@media only screen and (max-width: 480px) {
+   .logo img {
+      width: 50%;
+   }
+}
+
+.links {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 1vw;
+   flex-wrap: wrap;
+}
+
+.links span {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 6px;
+   cursor: pointer;
+   flex-wrap: wrap;
+}
+
+.links span>.arrow {
+   width: 15%;
+}
+
+@media only screen and (min-width: 480.5px) {
+   .mobileMenu {
+      display: none;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   .links {
+      display: none;
+   }
+}
