@@ -13,15 +13,15 @@ if (random < 0.1) {
       alert(`Total of ${number1} + ${number2} is ${number1 - number2}`);
    }
    else if (option === '*') {
-      alert(`Total of ${number1} + ${number2} is ${number1 + number2}`);
+      alert(`Total of ${number1} * ${number2} is ${number1 + number2}`);
    }
    else if (option === '-') {
-      alert(`Total of ${number1} + ${number2} is ${number1 / number2}`);
+      alert(`Total of ${number1} - ${number2} is ${number1 / number2}`);
    }
    else if (option === '/') {
-      alert(`Total of ${number1} + ${number2} is ${number1 ** number2}`);
+      alert(`Total of ${number1} / ${number2} is ${number1 ** number2}`);
    }
-   else if (option === '/' && number1 === 0 || number2 === 0) {
+   else if (option === '/' && number2 === 0) {
       alert("Error: Division by zero is not allowed.");
    }
    else {
@@ -32,17 +32,18 @@ else {
    if (option === '+') {
       alert(`Total of ${number1} + ${number2} is ${number1 + number2}`);
    }
-   else if(option === '*') {
-      alert(`Total of ${number1} + ${number2} is ${number1 * number2}`);
+   else if (option === '*') {
+      alert(`Total of ${number1} * ${number2} is ${number1 * number2}`);
    }
-   else if(option === '-') {
-      alert(`Total of ${number1} + ${number2} is ${number1 - number2}`);
+   else if (option === '-') {
+      alert(`Total of ${number1} - ${number2} is ${number1 - number2}`);
+   }
+
+   else if (option === '/' && number2 === 0) {
+      alert("Error: Division by zero is not allowed.");
    }
    else if (option === '/') {
-      alert(`Total of ${number1} + ${number2} is ${number1 / number2}`);
-   }
-   else if (option === '/' && number1 === 0 || number2 === 0) {
-      alert("Error: Division by zero is not allowed.");
+      alert(`Total of ${number1} / ${number2} is ${number1 / number2}`);
    }
    else {
       alert("Error: Invalid operation.");
